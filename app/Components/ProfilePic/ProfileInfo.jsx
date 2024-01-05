@@ -3,12 +3,11 @@ import Image from 'next/image'
 import React from 'react'
 import ProfilePicture from '../../../public/assesst/profile.jpg'
 import { Typography } from '@mui/material'
-const ProfileInfo = ({ Width, Height, Color }) => {
+const ProfileInfo = ({ Width, Height, emailName }) => {
     return (
         <>
             <Box sx={{
-                width: "120px",
-                height: "120px",
+
                 bgcolor: "white",
                 display: "flex",
                 justifyContent: "center",
@@ -18,7 +17,8 @@ const ProfileInfo = ({ Width, Height, Color }) => {
             }}>
                 <Image
                     style={{
-                        borderRadius: "500px"
+                        borderRadius: "500px",
+                        border: "3px solid yellow"
                     }}
                     width={Width}
                     height={Height}
@@ -29,8 +29,11 @@ const ProfileInfo = ({ Width, Height, Color }) => {
 
 
             <Typography sx={{ fontSize: "20px", }}>Hammad Khan</Typography>
+            <Typography sx={{ fontSize: "18px", color: "gray" }}>{emailName}</Typography>
         </>
     )
 }
 
 export default ProfileInfo
+
+
